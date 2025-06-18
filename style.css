@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #5e004d, #a83289, #ff80bf);
+  background: linear-gradient(135deg, #52053b, #be0b6e, #b61f7c);
   font-family: 'Quicksand', sans-serif;
   color: #fff;
   display: flex;
@@ -221,7 +221,7 @@ body {
   }
 
   .song-info h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .romantic-quote {
