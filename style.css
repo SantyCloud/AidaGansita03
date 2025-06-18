@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #52053b, #be0b6e, #b61f7c);
+  background: linear-gradient(135deg, #27011c, #ad0461, #27011c);
   font-family: 'Quicksand', sans-serif;
   color: #fff;
   display: flex;
@@ -53,12 +53,12 @@ body {
   font-size: 1.2rem;
   color: #ffc2e0;
   margin-bottom: 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   text-shadow: 0 0 10px rgba(255, 192, 224, 0.7);
+  display: block;
+  word-break: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
   max-width: 100%;
-  display: inline-block;
 }
 
 .song-info p {
@@ -221,7 +221,7 @@ body {
   }
 
   .song-info h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .romantic-quote {
