@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh; /* Cambio aquí para evitar salto inicial en móvil */
   overflow: hidden;
   padding: 20px;
   position: relative;
@@ -39,8 +39,6 @@ body {
   z-index: 1;
   border: 2px solid #ff85c1;
   box-shadow: 0 0 25px rgba(255, 128, 191, 0.5), inset 0 0 25px rgba(255, 105, 180, 0.3);
-  /* Para que la carta no se quede arriba en móvil */
-  margin: auto;
 }
 
 .album-art {
@@ -57,10 +55,9 @@ body {
   margin-bottom: 10px;
   text-shadow: 0 0 10px rgba(255, 192, 224, 0.7);
   display: block;
-  word-break: normal;  /* evitamos que rompa en medio de palabras */
-  white-space: nowrap;  /* fuerza a que todo esté en una línea */
-  overflow: hidden;
-  text-overflow: ellipsis;  /* pone ... si no cabe */
+  word-break: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
   max-width: 100%;
 }
 
@@ -190,14 +187,14 @@ body {
 
 .romantic-quote {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.2rem; /* igual tamaño que el título */
-  font-weight: 600;  /* igual peso que el título */
-  line-height: 1.4;
+  font-size: 1.2rem; /* igual que el título */
   color: #ffe6f0;
   text-shadow: 0 0 10px rgba(255, 230, 240, 0.8), 0 2px 6px rgba(199, 122, 176, 0.7);
   margin-top: 14px;
   user-select: none;
   padding: 0 8px;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .heart {
@@ -220,26 +217,16 @@ body {
 }
 
 @media (max-width: 420px) {
-  body {
-    padding: 20px 15px;
-  }
-  
   .player-card {
     padding: 20px 15px;
-    max-width: 100%;
-    margin: auto; /* centramos verticalmente en móvil */
   }
 
   .song-info h3 {
-    font-size: 1rem; /* más pequeño para que no se corte */
-    white-space: nowrap; /* una línea */
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 1.1rem;
   }
 
   .romantic-quote {
     font-size: 1rem;
-    font-weight: 600;
   }
 
   .album-art {
